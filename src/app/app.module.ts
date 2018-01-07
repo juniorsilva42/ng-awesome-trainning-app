@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { StreamComponent } from './components/stream/stream.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
     SignupComponent,
     CartComponent,
     CustomersComponent,
-    CursosComponent
+    CursosComponent,
+    StreamComponent
   ],
   imports: [
     BrowserModule
