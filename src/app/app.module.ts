@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CustomersComponent } from './components/customers/customers.component';  
+import { CustomersComponent } from './components/customers/customers.component';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CustomersComponent } from './components/customers/customers.component';
     LoginComponent,
     SignupComponent,
     CartComponent,
-    CustomersComponent
+    CustomersComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule
