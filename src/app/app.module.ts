@@ -3,21 +3,24 @@ import { NgModule } from '@angular/core';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 // MODULES
 import { CursosModule } from './modules/cursos/cursos.module';
 
+// SERVICES
+import { HeroesService } from './services/heroes/heroes.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
     CursosModule
   ],
-  providers: [],
+  providers: [ HeroesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
