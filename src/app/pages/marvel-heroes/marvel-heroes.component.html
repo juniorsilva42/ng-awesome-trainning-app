@@ -1,0 +1,7 @@
+<h1>Marvel Heroes:</h1>
+<div class="content">
+    <div *ngFor="let hero of heroes" class="heroes">
+      <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" class="heroThumb">
+      <p class="heroName">{{hero.name}}</p>
+    </div> 
+</div>

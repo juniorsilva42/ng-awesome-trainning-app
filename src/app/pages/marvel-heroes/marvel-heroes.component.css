@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.content > .heroes {
+    margin-right: 15px;
+    justify-content: center;
+}
+
+.heroThumb {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 10%;
+}
+
+.heroName {
+    font-size: 15px;
+}
