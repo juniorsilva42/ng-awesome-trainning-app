@@ -28,8 +28,8 @@ export class MarvelHeroesService {
         if(this.data)
             return Promise.resolve(this.data);
         
-        return new Promise(resolve => {
-           
+        return new Promise((resolve, reject) => {
+
             this.http.
                 get(
                     `https://gateway.marvel.com:443/v1/public/characters?ts=${this.timestamp}&orderBy=name&limit=${this.heroesWhere.limit}&apikey=${this.heroesWhere.pubKey}&hash=${this.hash}`

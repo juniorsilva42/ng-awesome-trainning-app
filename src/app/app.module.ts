@@ -1,32 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
-// COMPONENTS
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './pages/heroes/heroes.component';
 import { MarvelHeroesComponent } from './pages/marvel-heroes/marvel-heroes.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CursosComponent } from './pages/cursos/cursos.component';
 
-// MODULES
+import { AppRoutingModule } from './app-routing.module';
 import { CursosModule } from './modules/cursos/cursos.module';
 
-// SERVICES
 import { HeroesService } from './services/heroes/heroes.service';
 import { MarvelHeroesService } from './services/marvel-heroes/marvel-heroes.service';
-
+import { SeoService } from './services/seo/seo.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    MarvelHeroesComponent
+    MarvelHeroesComponent,
+    HomeComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
     CursosModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [ HeroesService, MarvelHeroesService ],
+  providers: [ MarvelHeroesService, SeoService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
