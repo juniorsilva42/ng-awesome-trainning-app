@@ -13,7 +13,7 @@ export class SeoService {
       title: '',
       description: '',
       slug: '',
-      keywords: [],
+      keywords: ['faculdade r sá, universidade rsa, ursa, cursos de graduação no piauí, cursos de graduação em picos, picos ensino superior, graduação no piauí, graduação em picos'],
       site_name: 'Faculdade RSá - Com você somos 10!',
       url: 'http://faculdadersa.edu.br/',
       image: 'url/to/image/image-default.png',

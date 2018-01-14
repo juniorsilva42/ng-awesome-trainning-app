@@ -1,1 +1,32 @@
-HOME!
+<article>
+  <h3>Class & Style Binding</h3>
+  <div>
+    Selecione uma classe:
+    <select #classe (change)="0">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-danger">Danger</option>
+    </select>
+    <br><br>
+
+    <div class="alert" role="alert"
+         [class.alert-success]="classe.value == 'alert-success'">
+      Sucesso!
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-info]="classe.value == 'alert-info'">
+      This alert needs your attention, but it's not super important.
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-warning]="classe.value == 'alert-warning'">
+      Better check yourself, you're not looking too good.
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-danger]="classe.value == 'alert-danger'">
+      Change a few things up and try submitting again.
+    </div>
+
+
+  </div>
+</article>
