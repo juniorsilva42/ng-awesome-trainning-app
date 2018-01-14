@@ -4,7 +4,7 @@ import Constants from '../assets/static/js/constants/constants';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
 

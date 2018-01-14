@@ -9,9 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { CursosComponent } from './pages/cursos/cursos.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { CursosModule } from './modules/cursos/cursos.module';
+import { CalcModule } from './modules/calc/calc.module';
 
-import { HeroesService } from './services/heroes/heroes.service';
 import { MarvelHeroesService } from './services/marvel-heroes/marvel-heroes.service';
 import { SeoService } from './services/seo/seo.service';
 
@@ -24,9 +23,9 @@ import { SeoService } from './services/seo/seo.service';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CalcModule
   ],
   providers: [ MarvelHeroesService, SeoService ],
   bootstrap: [AppComponent]

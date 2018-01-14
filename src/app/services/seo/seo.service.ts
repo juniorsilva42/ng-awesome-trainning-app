@@ -40,6 +40,8 @@ export class SeoService {
     this.meta.updateTag({ itemprop: 'name', content: config.title});
     this.meta.updateTag({ itemprop: 'description', content: config.description});
     this.meta.updateTag({ itemprop: 'image', content: config.image});
+    this.meta.updateTag({ name: 'robots', content: 'index, follow'});
+    this.meta.updateTag({ name: 'googlebot', content: 'index, follow'});
 
   }
 

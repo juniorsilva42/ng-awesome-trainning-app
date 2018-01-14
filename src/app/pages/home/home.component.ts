@@ -8,8 +8,7 @@ import { SeoService } from '../../services/seo/seo.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private seo: SeoService) { 
-  }
+  constructor(private seo: SeoService) {}
 
   ngOnInit() {
     this.seo._generateTags({

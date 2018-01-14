@@ -11,6 +11,11 @@
     </select>
     <br><br>
 
+    <div class="alert alert-info" role="alert"
+         [style.display]="classe.value == 'default' ? 'block' : 'none'">
+      Selecione uma opção acima para ver o que acontece
+    </div>
+
     <div class="alert alert-danger" role="alert"
          [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
       <strong>OOWW!!</strong> Erro fatal no servidor. Contate a equipe de Desenvolvimento.
@@ -18,17 +23,17 @@
 
     <div class="alert alert-info" role="alert"
       [style.display]="classe.value == 'alert-info' ? 'block' : 'none'">
-      <strong>HEEY!!!</strong> Optou pela informação!
+      Um simples card de info
     </div>
 
     <div class="alert alert-warning" role="alert"
     [style.display]="classe.value == 'alert-warning' ? 'block' : 'none'">
-      <strong>HEEY!!!</strong> Optou pelo alerta!
+      Um simples card de aviso
     </div>
 
     <div class="alert alert-success" role="alert"
          [style.display]="classe.value == 'alert-success' ? 'block' : 'none'">
-      Sucesso!
+      Um simples card de sucesso
     </div>
 
 
