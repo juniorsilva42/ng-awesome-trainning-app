@@ -3,6 +3,7 @@
   <div>
     Selecione uma classe:
     <select #classe (change)="0">
+      <option value="default">Selecione uma opção</option>
       <option value="alert-success">Sucesso</option>
       <option value="alert-info">Info</option>
       <option value="alert-warning">Warning</option>
@@ -10,21 +11,24 @@
     </select>
     <br><br>
 
-    <div class="alert" role="alert"
-         [class.alert-success]="classe.value == 'alert-success'">
+    <div class="alert alert-danger" role="alert"
+         [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+      <strong>OOWW!!</strong> Erro fatal no servidor. Contate a equipe de Desenvolvimento.
+    </div>
+
+    <div class="alert alert-info" role="alert"
+      [style.display]="classe.value == 'alert-info' ? 'block' : 'none'">
+      <strong>HEEY!!!</strong> Optou pela informação!
+    </div>
+
+    <div class="alert alert-warning" role="alert"
+    [style.display]="classe.value == 'alert-warning' ? 'block' : 'none'">
+      <strong>HEEY!!!</strong> Optou pelo alerta!
+    </div>
+
+    <div class="alert alert-success" role="alert"
+         [style.display]="classe.value == 'alert-success' ? 'block' : 'none'">
       Sucesso!
-    </div>
-    <div class="alert" role="alert"
-    [class.alert-info]="classe.value == 'alert-info'">
-      This alert needs your attention, but it's not super important.
-    </div>
-    <div class="alert" role="alert"
-    [class.alert-warning]="classe.value == 'alert-warning'">
-      Better check yourself, you're not looking too good.
-    </div>
-    <div class="alert" role="alert"
-         [class.alert-warning]="classe.value == 'alert-warning'">
-      Better check yourself, you're not looking too good.
     </div>
 
 
