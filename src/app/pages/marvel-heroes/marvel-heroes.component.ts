@@ -15,16 +15,19 @@ export class MarvelHeroesComponent implements OnInit {
 
   constructor(public marvelHeroService: MarvelHeroesService, private seo: SeoService) {
 
-      this.getAllMarvelHeroes();
+    this.getAllMarvelHeroes();
   }
 
-  getAllMarvelHeroes(){
+  async getAllMarvelHeroes(){
+    
+    try{
+      const data = await this.marvelHeroService.getHeroes();
+      this.obj = data;
+      this.heroes = this.obj.data.results;
+    }catch(e){
+      console.log(`[ERR: ${e}]`);
+    }
 
-    this.marvelHeroService.getHeroes()
-        .then(data => {
-            this.obj = data;
-            this.heroes = this.obj.data.results;
-        });
   }
 
   ngOnInit() {

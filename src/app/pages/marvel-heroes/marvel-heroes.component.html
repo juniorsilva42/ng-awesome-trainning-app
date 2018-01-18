@@ -1,7 +1,18 @@
-<h1>Marvel Heroes:</h1>
-<div class="content">
-    <div *ngFor="let hero of heroes" class="heroes">
+<div class="container-fluid">
+
+  <h1>Marvel Heroes</h1>
+
+  <section>
+    <div class="hero-screen" *ngFor="let hero of heroes">
       <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" class="heroThumb">
-      <p class="heroName">{{hero.name}}</p>
-    </div> 
+      <div class="heroInfo">
+        <p class="heroName">Nome: {{hero.name}}</p>
+        <p class="heroDescription" *ngIf="(hero.description != ''); else elseBlock">Descrição: {{hero.description}}</p>
+        <ng-template #elseBlock>Descrição: indisponível</ng-template>
+      </div>
+    </div>
+  </section> 
+
 </div>
+
+

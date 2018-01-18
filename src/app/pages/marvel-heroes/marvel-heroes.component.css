@@ -4,23 +4,26 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.content {
-    width: 1000px;
+.hero-screen {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.content > .heroes {
-    margin-right: 15px;
-    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 .heroThumb {
     width: 120px;
     height: 120px;
     border: 1px solid #ccc;
-    padding: 3px;
     border-radius: 10%;
+    float: left;
+}
+
+.heroInfo {
+    margin: 10px 0 0 15px; 
+    width: 750px;
 }
 
 .heroName {
