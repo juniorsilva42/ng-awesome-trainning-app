@@ -4,27 +4,29 @@ import { MarvelHeroesService } from '../../services/marvel-heroes/marvel-heroes.
 import { SeoService } from '../../services/seo/seo.service';
 
 @Component({
-  selector: 'marvel-heroes',
+  selector: 'app-heroes-screen',
   templateUrl: './marvel-heroes.component.html',
-  styleUrls: ['./marvel-heroes.component.css']
+  styleUrls: ['./marvel-heroes.component.sass']
 })
 export class MarvelHeroesComponent implements OnInit {
 
   public obj: any;
   public heroes: any;
 
+  showSpinner: boolean = true;
+
   constructor(public marvelHeroService: MarvelHeroesService, private seo: SeoService) {
 
     this.getAllMarvelHeroes();
   }
 
-  async getAllMarvelHeroes(){
-    
-    try{
+  async getAllMarvelHeroes() {
+    try {
       const data = await this.marvelHeroService.getHeroes();
       this.obj = data;
       this.heroes = this.obj.data.results;
-    }catch(e){
+      this.showSpinner = false;
+    }catch (e) {
       console.log(`[ERR: ${e}]`);
     }
 

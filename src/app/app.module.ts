@@ -10,22 +10,26 @@ import { CursosComponent } from './pages/cursos/cursos.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CalcModule } from './modules/calc/calc.module';
+import { BusyModule } from 'angular2-busy';
 
 import { MarvelHeroesService } from './services/marvel-heroes/marvel-heroes.service';
 import { SeoService } from './services/seo/seo.service';
+import { LoadingComponent } from './shared/ui/loading-component/loading-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarvelHeroesComponent,
     HomeComponent,
-    CursosComponent
+    CursosComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    CalcModule
+    CalcModule,
+    BusyModule
   ],
   providers: [ MarvelHeroesService, SeoService ],
   bootstrap: [AppComponent]

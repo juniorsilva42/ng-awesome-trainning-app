@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { Md5 } from 'ts-md5/dist/md5';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MarvelHeroesService {
-    
+
     private initialRequest = {
         requestUrl: 'https://gateway.marvel.com:443/v1/public/characters',
         params: {
@@ -14,23 +14,25 @@ export class MarvelHeroesService {
             privKey: '358a1810ff6589feb270218d03af96e52c0843df'
         }
     }
+    
     private md5: any;
     private timestamp: number;
     private hash: any;
     public data: any;
 
-    constructor(public http: Http) { 
+    constructor(public http: Http) {
 
         this.md5 = new Md5();
         this.timestamp = Number(new Date);
         this.hash = Md5.hashStr(`${this.timestamp}${this.initialRequest.params.privKey}${this.initialRequest.params.pubKey}`);
     }
 
-    getHeroes (){
+    getHeroes() {
 
-        if(this.data)
+        if (this.data)
             return Promise.resolve(this.data);
         
+
         return new Promise((resolve, reject) => {
 
             this.http.
@@ -43,7 +45,6 @@ export class MarvelHeroesService {
                     resolve(this.data);
                 });
         });
-    
     }
 
     getInfoHeroes(id: number){
